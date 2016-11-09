@@ -2,9 +2,11 @@ import web
 import logging
 import json
 import time
+
 import twitter as twitterClient
 
 import sentiment
+import settings
 
 logging.basicConfig(level=logging.DEBUG,
                     format="%(asctime)s - %(filename)s:%(funcName)s:%(lineno)d - %(levelname)s - %(message)s")
@@ -79,4 +81,4 @@ class twitter:
         return json.dumps(res, sort_keys=True, indent=4, separators=(',', ': '))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=settings.PORT)
