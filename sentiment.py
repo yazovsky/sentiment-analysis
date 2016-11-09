@@ -4,10 +4,15 @@ from nltk.sentiment import SentimentAnalyzer
 from nltk.sentiment.util import *
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
+import os
+
 # set up NLTK
-nltk.data.path.append('./nltk_data/')
+NLTK_FOLDER = './nltk_data/'
+nltk.data.path.append(NLTK_FOLDER)
 n_instances = 100
 
+if not os.path.exists(NLTK_FOLDER):
+    nltk.download(info_or_id='all', download_dir=NLTK_FOLDER, quiet=True, force=True)
 
 # predict sentence sentiment. Return
 def predict(sentence):
