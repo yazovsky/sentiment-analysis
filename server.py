@@ -15,7 +15,13 @@ urls = (
     '/predict(.*)', 'predict',
     '/twitter(.*)', 'twitter'
 )
-app = web.application(urls, globals())
+
+class MyApplication(web.application):
+    def run(self, port=8080, *middleware):
+        func = self.wsgifunc(*middleware)
+        return web.httpserver.runsimple(func, ('0.0.0.0', port))
+
+app = MyApplication(urls, globals())
 
 current_milli_time = lambda: int(round(time.time() * 1000))
 
