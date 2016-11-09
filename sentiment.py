@@ -12,7 +12,7 @@ nltk.data.path.append(NLTK_FOLDER)
 n_instances = 100
 
 if not os.path.exists(NLTK_FOLDER):
-    nltk.download(info_or_id='all', download_dir=NLTK_FOLDER, quiet=True, force=True)
+    nltk.download(info_or_id='book', download_dir=NLTK_FOLDER, quiet=True, force=True)
 
 # predict sentence sentiment. Return
 def predict(sentence):
