@@ -13,7 +13,8 @@ logging.basicConfig(level=logging.DEBUG,
 urls = (
     '/train(.*)', 'train',
     '/predict(.*)', 'predict',
-    '/twitter(.*)', 'twitter'
+    '/twitter(.*)', 'twitter',
+    '/email(.*)', 'email'
 )
 
 class MyApplication(web.application):
@@ -41,6 +42,24 @@ class train:
         }
         web.header('Content-Type', 'application/json')
         return json.dumps(res)
+
+class email:
+
+    # submit a Twitter username for analysis
+    def GET(self, name):
+        logging.debug(web.data())
+        render = web.template.render('templates/')
+        return render.index("")
+
+    # submit a Twitter username for analysis
+    def POST(self, name):
+        logging.debug(web.data())
+
+        text = web.input(text="").text
+        prediction_result = sentiment.predict(text)
+
+        render = web.template.render('templates/')
+        return render.index(prediction_result)
 
 class predict:
 
