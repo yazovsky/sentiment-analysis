@@ -1,0 +1,18 @@
+$def with (sentiment)
+    <form action="/email" method="POST">
+        <div style="margin:auto; width:50%;">
+            <div>
+                <label for="text">Enter Text</label>
+            </div>
+            <div>
+                <textarea  name="text" id="text" rows="600" cols="200"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit"/>
+            </div>
+            <div>
+                $if sentiment:
+                    This text is: $sentiment
+            </div>
+        </div>
+    </form>
