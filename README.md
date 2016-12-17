@@ -36,6 +36,8 @@ docker run -r -P 8099:8099 sentiments-analysis
 pre-requirements: packages installed Python >=2.7 and pip, port 8099 available
 
 ```
+git clone git@github.com:softrin/sentiment-analysis.git
+cd sentiment-analysis
 pip install -r requirements.txt
 python server.py
 ```
