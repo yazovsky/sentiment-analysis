@@ -14,9 +14,9 @@ where 'compound' is overal result.
 
 # Public playground
 
-Twitter: Analyze sentiment of popular tweets using search keyword. E.g. "US Election 2016": <http://52.44.14.137:8099/twitter?search=election>
+Twitter: Analyze sentiment of popular tweets using search keyword. E.g. "US Election 2016": <http://52.44.14.137:8999/twitter?search=election>
 
-Simple web form where you can submit random data: <http://52.44.14.137:8099/email>
+Simple web form where you can submit random data: <http://52.44.14.137:8999/email>
 
 # Run locally
 
