@@ -5,9 +5,9 @@ import logging
 logging.basicConfig(level=logging.DEBUG,
                     format="%(asctime)s - %(filename)s:%(funcName)s:%(lineno)d - %(levelname)s - %(message)s")
 
-TWITTER_CONSUMER_KEY = "47eElZrxEf9kKXWVVqs8SN1KC"
-TWITTER_CONSUMER_SECRET = "3x03fhlOQA9ntM8qeDXPDCO2MoMcHyqDvDfzdH7FYbgXcm3um9"
-TWITTER_ACCESS_TOKEN = "17496707-iP1zq2mWxltSdJ8UiCxwBEiFpybpRhuAxNjSEyFMu"
-TWITTER_ACCESS_TOKEN_SECRET = "GSvbGyN2KJ7T8cAKyq70WIvLcjNVglJFOhHulSFf2HqjK"
+TWITTER_CONSUMER_KEY = "SOME"
+TWITTER_CONSUMER_SECRET = "SOME"
+TWITTER_ACCESS_TOKEN = "SOME"
+TWITTER_ACCESS_TOKEN_SECRET = "SOME"
 
 PORT = 8099
